@@ -1,0 +1,1437 @@
+<!DOCTYPE html>
+<!-- saved from url=(0114)file:///C:/Users/Alfariza%20Aryasatya/OneDrive/Documents/DIGITAL%20INTREPRENEUR%20SMT%205/web%20toko%20gaming.html -->
+<html lang="id"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AVAGAMINGSTORE - Toko Gaming Terpercaya</title>
+    <link rel="stylesheet" href="./AVAGAMINGSTORE - Toko Gaming Terpercaya_files/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        :root {
+            --primary: #1a1a2e;
+            --secondary: #16213e;
+            --accent: #0f3460;
+            --highlight: #e94560;
+            --light: #f1f1f1;
+            --dark: #0d0d1a;
+        }
+
+        body {
+            background-color: var(--primary);
+            color: var(--light);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: var(--secondary);
+            padding: 20px 0;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo i {
+            font-size: 2.5rem;
+            color: var(--highlight);
+        }
+
+        .logo h1 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            background: linear-gradient(to right, #e94560, #4e54c8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .cart-icon {
+            position: relative;
+            cursor: pointer;
+            font-size: 1.5rem;
+            color: var(--light);
+        }
+
+        .cart-count {
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            background-color: var(--highlight);
+            color: white;
+            border-radius: 50%;
+            width: 22px;
+            height: 22px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(10, 10, 20, 0.8), rgba(10, 10, 20, 0.8)), 
+                        url('https://images.unsplash.com/photo-1550745165-9bc0b252726f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            padding: 100px 0;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .hero h2 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            color: #d1d1d1;
+        }
+
+        .btn {
+            display: inline-block;
+            background: var(--highlight);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        .btn:hover {
+            background: #ff2e4f;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(233, 69, 96, 0.3);
+        }
+
+        /* Products Section */
+        .products-section {
+            padding: 50px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 2.2rem;
+            position: relative;
+            display: inline-block;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(to right, var(--accent), var(--highlight));
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .product-card {
+            background-color: var(--secondary);
+            border-radius: 10px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+        }
+
+        .product-image {
+            height: 200px;
+            width: 100%;
+            background-color: var(--accent);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .product-card:hover .product-image img {
+            transform: scale(1.05);
+        }
+
+        .product-info {
+            padding: 20px;
+        }
+
+        .product-title {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: white;
+        }
+
+        .product-description {
+            color: #b8b8b8;
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+            height: 60px;
+            overflow: hidden;
+        }
+
+        .product-price {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--highlight);
+            margin-bottom: 15px;
+        }
+
+        .product-actions {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .add-to-cart {
+            background-color: var(--accent);
+            color: white;
+            border: none;
+            padding: 8px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            font-weight: 600;
+        }
+
+        .add-to-cart:hover {
+            background-color: var(--highlight);
+        }
+
+        /* Cart Styles */
+        .cart-modal {
+            position: fixed;
+            top: 0;
+            right: -400px;
+            width: 380px;
+            height: 100vh;
+            background-color: var(--secondary);
+            box-shadow: -5px 0 15px rgba(0, 0, 0, 0.5);
+            transition: right 0.4s ease;
+            z-index: 1000;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .cart-modal.open {
+            right: 0;
+        }
+
+        .cart-header {
+            padding: 20px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .cart-header h3 {
+            font-size: 1.5rem;
+        }
+
+        .close-cart {
+            background: none;
+            border: none;
+            color: var(--light);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        .cart-items {
+            flex: 1;
+            overflow-y: auto;
+            padding: 20px;
+        }
+
+        .cart-item {
+            display: flex;
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .cart-item-image {
+            width: 70px;
+            height: 70px;
+            background-color: var(--accent);
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            overflow: hidden;
+        }
+
+        .cart-item-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .cart-item-details {
+            flex: 1;
+        }
+
+        .cart-item-title {
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+
+        .cart-item-price {
+            color: var(--highlight);
+            font-weight: 600;
+        }
+
+        .cart-item-quantity {
+            display: flex;
+            align-items: center;
+            margin-top: 5px;
+        }
+
+        .quantity-btn {
+            background-color: var(--accent);
+            color: white;
+            border: none;
+            width: 25px;
+            height: 25px;
+            border-radius: 3px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .quantity-input {
+            width: 40px;
+            text-align: center;
+            background-color: transparent;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: white;
+            margin: 0 5px;
+            border-radius: 3px;
+            padding: 3px;
+        }
+
+        .remove-item {
+            background: none;
+            border: none;
+            color: #ff4d4d;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+
+        .cart-footer {
+            padding: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .cart-total {
+            display: flex;
+            justify-content: space-between;
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+
+        .checkout-btn {
+            width: 100%;
+            padding: 15px;
+            background-color: var(--highlight);
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .checkout-btn:hover {
+            background-color: #ff2e4f;
+        }
+
+        .overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: 999;
+            display: none;
+        }
+
+        .overlay.active {
+            display: block;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            padding: 40px 0 20px;
+            margin-top: 50px;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+
+        .footer-section {
+            flex: 1;
+            min-width: 250px;
+            margin-bottom: 20px;
+        }
+
+        .footer-section h3 {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            color: var(--highlight);
+        }
+
+        .footer-section p, .footer-section a {
+            color: #b8b8b8;
+            margin-bottom: 10px;
+            display: block;
+            text-decoration: none;
+        }
+
+        .footer-section a:hover {
+            color: var(--highlight);
+        }
+
+        .social-icons {
+            display: flex;
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .social-icons a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background-color: var(--accent);
+            border-radius: 50%;
+            transition: background-color 0.3s;
+        }
+
+        .social-icons a:hover {
+            background-color: var(--highlight);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #888;
+            font-size: 0.9rem;
+        }
+
+        /* WhatsApp Button */
+        .whatsapp-btn {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #25D366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            box-shadow: 0 4px 20px rgba(37, 211, 102, 0.5);
+            z-index: 100;
+            transition: transform 0.3s;
+            text-decoration: none;
+        }
+
+        .whatsapp-btn:hover {
+            transform: scale(1.1);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .cart-modal {
+                width: 100%;
+                right: -100%;
+            }
+            
+            .hero h2 {
+                font-size: 2.2rem;
+            }
+            
+            .products-grid {
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-gamepad"></i>
+                    <h1>AVAGAMINGSTORE</h1>
+                </div>
+                <div class="cart-icon" id="cartIcon">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count" id="cartCount">0</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h2>Gaming Gear Terbaik untuk Kemenangan Anda</h2>
+            <p>Temukan koleksi gaming gear terbaru dengan kualitas premium dan harga terbaik. Tingkatkan pengalaman gaming Anda dengan produk-produk pilihan dari AVAGAMINGSTORE.</p>
+            <a href="file:///C:/Users/Alfariza%20Aryasatya/OneDrive/Documents/DIGITAL%20INTREPRENEUR%20SMT%205/web%20toko%20gaming.html#products" class="btn">Jelajahi Produk</a>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products-section" id="products">
+        <div class="container">
+            <h2 class="section-title">Produk Kami</h2>
+            <div class="products-grid" id="productsGrid"><div class="product-card">
+                    <div class="product-image">
+                        <img src="./AVAGAMINGSTORE - Toko Gaming Terpercaya_files/mouse gaming.png" alt="Gaming Mouse RGB" onerror="this.src=&#39;https://via.placeholder.com/300x200/0f3460/ffffff?text=Gambar+Tidak+Tersedia&#39;">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Gaming Mouse RGB</h3>
+                        <p class="product-description">Mouse gaming dengan sensor presisi tinggi dan RGB lighting.</p>
+                        <div class="product-price">Rp&nbsp;150.000</div>
+                        <div class="product-actions">
+                            <button class="add-to-cart" data-id="1">Tambah ke Keranjang</button>
+                        </div>
+                    </div>
+                </div><div class="product-card">
+                    <div class="product-image">
+                        <img src="./AVAGAMINGSTORE - Toko Gaming Terpercaya_files/keyboard gaming.png" alt="Mechanical Keyboard" onerror="this.src=&#39;https://via.placeholder.com/300x200/0f3460/ffffff?text=Gambar+Tidak+Tersedia&#39;">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Mechanical Keyboard</h3>
+                        <p class="product-description">Keyboard mechanical dengan switch biru dan backlight RGB.</p>
+                        <div class="product-price">Rp&nbsp;300.000</div>
+                        <div class="product-actions">
+                            <button class="add-to-cart" data-id="2">Tambah ke Keranjang</button>
+                        </div>
+                    </div>
+                </div><div class="product-card">
+                    <div class="product-image">
+                        <img src="./AVAGAMINGSTORE - Toko Gaming Terpercaya_files/headset gaming.png" alt="Gaming Headset 7.1" onerror="this.src=&#39;https://via.placeholder.com/300x200/0f3460/ffffff?text=Gambar+Tidak+Tersedia&#39;">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Gaming Headset 7.1</h3>
+                        <p class="product-description">Headset surround sound 7.1 dengan mikrofon noise-cancelling.</p>
+                        <div class="product-price">Rp&nbsp;250.000</div>
+                        <div class="product-actions">
+                            <button class="add-to-cart" data-id="3">Tambah ke Keranjang</button>
+                        </div>
+                    </div>
+                </div><div class="product-card">
+                    <div class="product-image">
+                        <img src="./AVAGAMINGSTORE - Toko Gaming Terpercaya_files/mousepad.png" alt="Mouse Pad XXL" onerror="this.src=&#39;https://via.placeholder.com/300x200/0f3460/ffffff?text=Gambar+Tidak+Tersedia&#39;">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Mouse Pad XXL</h3>
+                        <p class="product-description">Mouse pad gaming ukuran besar dengan permukaan halus.</p>
+                        <div class="product-price">Rp&nbsp;70.000</div>
+                        <div class="product-actions">
+                            <button class="add-to-cart" data-id="4">Tambah ke Keranjang</button>
+                        </div>
+                    </div>
+                </div><div class="product-card">
+                    <div class="product-image">
+                        <img src="./AVAGAMINGSTORE - Toko Gaming Terpercaya_files/Webcam.png" alt="Webcam 1080p" onerror="this.src=&#39;https://via.placeholder.com/300x200/0f3460/ffffff?text=Gambar+Tidak+Tersedia&#39;">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Webcam 1080p</h3>
+                        <p class="product-description">Webcam HD 1080p untuk streaming dan conference.</p>
+                        <div class="product-price">Rp&nbsp;200.000</div>
+                        <div class="product-actions">
+                            <button class="add-to-cart" data-id="5">Tambah ke Keranjang</button>
+                        </div>
+                    </div>
+                </div><div class="product-card">
+                    <div class="product-image">
+                        <img src="./AVAGAMINGSTORE - Toko Gaming Terpercaya_files/kursi gaming.png" alt="Gaming Chair" onerror="this.src=&#39;https://via.placeholder.com/300x200/0f3460/ffffff?text=Gambar+Tidak+Tersedia&#39;">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Gaming Chair</h3>
+                        <p class="product-description">Kursi gaming ergonomis dengan desain esport.</p>
+                        <div class="product-price">Rp&nbsp;1.500.000</div>
+                        <div class="product-actions">
+                            <button class="add-to-cart" data-id="6">Tambah ke Keranjang</button>
+                        </div>
+                    </div>
+                </div><div class="product-card">
+                    <div class="product-image">
+                        <img src="./AVAGAMINGSTORE - Toko Gaming Terpercaya_files/joystick ps 4.png" alt="Controller Wireless" onerror="this.src=&#39;https://via.placeholder.com/300x200/0f3460/ffffff?text=Gambar+Tidak+Tersedia&#39;">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Controller Wireless</h3>
+                        <p class="product-description">Controller wireless untuk PC dan konsol gaming.</p>
+                        <div class="product-price">Rp&nbsp;150.000</div>
+                        <div class="product-actions">
+                            <button class="add-to-cart" data-id="7">Tambah ke Keranjang</button>
+                        </div>
+                    </div>
+                </div><div class="product-card">
+                    <div class="product-image">
+                        <img src="./AVAGAMINGSTORE - Toko Gaming Terpercaya_files/monitor gaming.png" alt="Monitor 144Hz" onerror="this.src=&#39;https://via.placeholder.com/300x200/0f3460/ffffff?text=Gambar+Tidak+Tersedia&#39;">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Monitor 144Hz</h3>
+                        <p class="product-description">Monitor gaming 24 inci dengan refresh rate 144Hz.</p>
+                        <div class="product-price">Rp&nbsp;2.000.000</div>
+                        <div class="product-actions">
+                            <button class="add-to-cart" data-id="8">Tambah ke Keranjang</button>
+                        </div>
+                    </div>
+                </div><div class="product-card">
+                    <div class="product-image">
+                        <img src="./AVAGAMINGSTORE - Toko Gaming Terpercaya_files/RGB Strip Light.png" alt="RGB Strip Light" onerror="this.src=&#39;https://via.placeholder.com/300x200/0f3460/ffffff?text=Gambar+Tidak+Tersedia&#39;">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">RGB Strip Light</h3>
+                        <p class="product-description">Strip LED RGB untuk setup gaming station.</p>
+                        <div class="product-price">Rp&nbsp;30.000</div>
+                        <div class="product-actions">
+                            <button class="add-to-cart" data-id="9">Tambah ke Keranjang</button>
+                        </div>
+                    </div>
+                </div><div class="product-card">
+                    <div class="product-image">
+                        <img src="./AVAGAMINGSTORE - Toko Gaming Terpercaya_files/external ssd 1tb.png" alt="External SSD 1TB" onerror="this.src=&#39;https://via.placeholder.com/300x200/0f3460/ffffff?text=Gambar+Tidak+Tersedia&#39;">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">External SSD 1TB</h3>
+                        <p class="product-description">SSD external untuk penyimpanan game yang cepat.</p>
+                        <div class="product-price">Rp&nbsp;350.000</div>
+                        <div class="product-actions">
+                            <button class="add-to-cart" data-id="10">Tambah ke Keranjang</button>
+                        </div>
+                    </div>
+                </div><div class="product-card">
+                    <div class="product-image">
+                        <img src="./AVAGAMINGSTORE - Toko Gaming Terpercaya_files/ram gaming.png" alt="RAM Gaming" onerror="this.src=&#39;https://via.placeholder.com/300x200/0f3460/ffffff?text=Gambar+Tidak+Tersedia&#39;">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">RAM Gaming</h3>
+                        <p class="product-description">RAM DDR4 16GB dengan heatsink RGB untuk performa gaming.</p>
+                        <div class="product-price">Rp&nbsp;400.000</div>
+                        <div class="product-actions">
+                            <button class="add-to-cart" data-id="11">Tambah ke Keranjang</button>
+                        </div>
+                    </div>
+                </div><div class="product-card">
+                    <div class="product-image">
+                        <img src="./AVAGAMINGSTORE - Toko Gaming Terpercaya_files/cooling pad gaming.png" alt="Cooling Pad Laptop" onerror="this.src=&#39;https://via.placeholder.com/300x200/0f3460/ffffff?text=Gambar+Tidak+Tersedia&#39;">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Cooling Pad Laptop</h3>
+                        <p class="product-description">Cooling pad dengan 4 kipas untuk laptop gaming.</p>
+                        <div class="product-price">Rp&nbsp;200.000</div>
+                        <div class="product-actions">
+                            <button class="add-to-cart" data-id="12">Tambah ke Keranjang</button>
+                        </div>
+                    </div>
+                </div><div class="product-card">
+                    <div class="product-image">
+                        <img src="./AVAGAMINGSTORE - Toko Gaming Terpercaya_files/microphone condenser.png" alt="Microphone Condenser" onerror="this.src=&#39;https://via.placeholder.com/300x200/0f3460/ffffff?text=Gambar+Tidak+Tersedia&#39;">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Microphone Condenser</h3>
+                        <p class="product-description">Microphone condenser untuk streaming dan recording.</p>
+                        <div class="product-price">Rp&nbsp;300.000</div>
+                        <div class="product-actions">
+                            <button class="add-to-cart" data-id="13">Tambah ke Keranjang</button>
+                        </div>
+                    </div>
+                </div><div class="product-card">
+                    <div class="product-image">
+                        <img src="./AVAGAMINGSTORE - Toko Gaming Terpercaya_files/meja gaming.png" alt="Gaming Desk" onerror="this.src=&#39;https://via.placeholder.com/300x200/0f3460/ffffff?text=Gambar+Tidak+Tersedia&#39;">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Gaming Desk</h3>
+                        <p class="product-description">Meja gaming dengan cable management dan RGB lighting.</p>
+                        <div class="product-price">Rp&nbsp;1.200.000</div>
+                        <div class="product-actions">
+                            <button class="add-to-cart" data-id="14">Tambah ke Keranjang</button>
+                        </div>
+                    </div>
+                </div><div class="product-card">
+                    <div class="product-image">
+                        <img src="./AVAGAMINGSTORE - Toko Gaming Terpercaya_files/vr gaming.png" alt="VR Headset" onerror="this.src=&#39;https://via.placeholder.com/300x200/0f3460/ffffff?text=Gambar+Tidak+Tersedia&#39;">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">VR Headset</h3>
+                        <p class="product-description">Virtual reality headset dengan kontroler motion.</p>
+                        <div class="product-price">Rp&nbsp;300.000</div>
+                        <div class="product-actions">
+                            <button class="add-to-cart" data-id="15">Tambah ke Keranjang</button>
+                        </div>
+                    </div>
+                </div><div class="product-card">
+                    <div class="product-image">
+                        <img src="./AVAGAMINGSTORE - Toko Gaming Terpercaya_files/stand headset.png" alt="Stand Headset Gaming" onerror="this.src=&#39;https://via.placeholder.com/300x200/0f3460/ffffff?text=Gambar+Tidak+Tersedia&#39;">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Stand Headset Gaming</h3>
+                        <p class="product-description">Stand headset dengan base yang kokoh dan desain elegan.</p>
+                        <div class="product-price">Rp&nbsp;50.000</div>
+                        <div class="product-actions">
+                            <button class="add-to-cart" data-id="16">Tambah ke Keranjang</button>
+                        </div>
+                    </div>
+                </div><div class="product-card">
+                    <div class="product-image">
+                        <img src="./AVAGAMINGSTORE - Toko Gaming Terpercaya_files/powerbank gaming.png" alt="Powerbank Gaming Fast Charge" onerror="this.src=&#39;https://via.placeholder.com/300x200/0f3460/ffffff?text=Gambar+Tidak+Tersedia&#39;">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Powerbank Gaming Fast Charge</h3>
+                        <p class="product-description">Powerbank 10000mAh dengan fast charging untuk perangkat gaming.</p>
+                        <div class="product-price">Rp&nbsp;150.000</div>
+                        <div class="product-actions">
+                            <button class="add-to-cart" data-id="17">Tambah ke Keranjang</button>
+                        </div>
+                    </div>
+                </div><div class="product-card">
+                    <div class="product-image">
+                        <img src="./AVAGAMINGSTORE - Toko Gaming Terpercaya_files/holder hp.png" alt="Holder HP Gaming" onerror="this.src=&#39;https://via.placeholder.com/300x200/0f3460/ffffff?text=Gambar+Tidak+Tersedia&#39;">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Holder HP Gaming</h3>
+                        <p class="product-description">Holder HP dengan sudut yang dapat disesuaikan untuk gaming mobile.</p>
+                        <div class="product-price">Rp&nbsp;50.000</div>
+                        <div class="product-actions">
+                            <button class="add-to-cart" data-id="18">Tambah ke Keranjang</button>
+                        </div>
+                    </div>
+                </div><div class="product-card">
+                    <div class="product-image">
+                        <img src="./AVAGAMINGSTORE - Toko Gaming Terpercaya_files/trigger controller.png" alt="Trigger Controller HP (PUBG/ML)" onerror="this.src=&#39;https://via.placeholder.com/300x200/0f3460/ffffff?text=Gambar+Tidak+Tersedia&#39;">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Trigger Controller HP (PUBG/ML)</h3>
+                        <p class="product-description">Trigger controller untuk meningkatkan kontrol dalam game mobile.</p>
+                        <div class="product-price">Rp&nbsp;50.000</div>
+                        <div class="product-actions">
+                            <button class="add-to-cart" data-id="19">Tambah ke Keranjang</button>
+                        </div>
+                    </div>
+                </div><div class="product-card">
+                    <div class="product-image">
+                        <img src="./AVAGAMINGSTORE - Toko Gaming Terpercaya_files/charger l shape.png" alt="Kabel Charger L-shape Gaming" onerror="this.src=&#39;https://via.placeholder.com/300x200/0f3460/ffffff?text=Gambar+Tidak+Tersedia&#39;">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Kabel Charger L-shape Gaming</h3>
+                        <p class="product-description">Kabel charger L-shape yang ergonomis untuk gaming sambil charge.</p>
+                        <div class="product-price">Rp&nbsp;50.000</div>
+                        <div class="product-actions">
+                            <button class="add-to-cart" data-id="20">Tambah ke Keranjang</button>
+                        </div>
+                    </div>
+                </div><div class="product-card">
+                    <div class="product-image">
+                        <img src="./AVAGAMINGSTORE - Toko Gaming Terpercaya_files/docking station.png" alt="Docking Station Controller/Konsol" onerror="this.src=&#39;https://via.placeholder.com/300x200/0f3460/ffffff?text=Gambar+Tidak+Tersedia&#39;">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Docking Station Controller/Konsol</h3>
+                        <p class="product-description">Docking station untuk charge dan penyimpanan controller gaming.</p>
+                        <div class="product-price">Rp&nbsp;150.000</div>
+                        <div class="product-actions">
+                            <button class="add-to-cart" data-id="21">Tambah ke Keranjang</button>
+                        </div>
+                    </div>
+                </div><div class="product-card">
+                    <div class="product-image">
+                        <img src="./AVAGAMINGSTORE - Toko Gaming Terpercaya_files/gpu cooler.png" alt="GPU (VGA Card)" onerror="this.src=&#39;https://via.placeholder.com/300x200/0f3460/ffffff?text=Gambar+Tidak+Tersedia&#39;">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">GPU (VGA Card)</h3>
+                        <p class="product-description">Graphics card high-end untuk gaming 4K dan VR.</p>
+                        <div class="product-price">Rp&nbsp;2.000.000</div>
+                        <div class="product-actions">
+                            <button class="add-to-cart" data-id="22">Tambah ke Keranjang</button>
+                        </div>
+                    </div>
+                </div><div class="product-card">
+                    <div class="product-image">
+                        <img src="./AVAGAMINGSTORE - Toko Gaming Terpercaya_files/cpu cooler.png" alt="CPU Cooler RGB (Air/Water)" onerror="this.src=&#39;https://via.placeholder.com/300x200/0f3460/ffffff?text=Gambar+Tidak+Tersedia&#39;">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">CPU Cooler RGB (Air/Water)</h3>
+                        <p class="product-description">CPU cooler dengan lighting RGB untuk PC gaming.</p>
+                        <div class="product-price">Rp&nbsp;250.000</div>
+                        <div class="product-actions">
+                            <button class="add-to-cart" data-id="23">Tambah ke Keranjang</button>
+                        </div>
+                    </div>
+                </div><div class="product-card">
+                    <div class="product-image">
+                        <img src="./AVAGAMINGSTORE - Toko Gaming Terpercaya_files/psu gaming.png" alt="PSU Gaming 550–850W" onerror="this.src=&#39;https://via.placeholder.com/300x200/0f3460/ffffff?text=Gambar+Tidak+Tersedia&#39;">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">PSU Gaming 550–850W</h3>
+                        <p class="product-description">Power supply unit untuk sistem gaming yang stabil.</p>
+                        <div class="product-price">Rp&nbsp;700.000</div>
+                        <div class="product-actions">
+                            <button class="add-to-cart" data-id="24">Tambah ke Keranjang</button>
+                        </div>
+                    </div>
+                </div><div class="product-card">
+                    <div class="product-image">
+                        <img src="./AVAGAMINGSTORE - Toko Gaming Terpercaya_files/figure karakter.png" alt="Figurine Karakter Game" onerror="this.src=&#39;https://via.placeholder.com/300x200/0f3460/ffffff?text=Gambar+Tidak+Tersedia&#39;">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Figurine Karakter Game</h3>
+                        <p class="product-description">Figurine karakter game favorit dengan detail yang menakjubkan.</p>
+                        <div class="product-price">Rp&nbsp;100.000</div>
+                        <div class="product-actions">
+                            <button class="add-to-cart" data-id="25">Tambah ke Keranjang</button>
+                        </div>
+                    </div>
+                </div><div class="product-card">
+                    <div class="product-image">
+                        <img src="./AVAGAMINGSTORE - Toko Gaming Terpercaya_files/wall art.png" alt="Poster / Wall Art Gaming" onerror="this.src=&#39;https://via.placeholder.com/300x200/0f3460/ffffff?text=Gambar+Tidak+Tersedia&#39;">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Poster / Wall Art Gaming</h3>
+                        <p class="product-description">Poster dan wall art bertema gaming untuk dekorasi ruangan.</p>
+                        <div class="product-price">Rp&nbsp;30.000</div>
+                        <div class="product-actions">
+                            <button class="add-to-cart" data-id="26">Tambah ke Keranjang</button>
+                        </div>
+                    </div>
+                </div><div class="product-card">
+                    <div class="product-image">
+                        <img src="./AVAGAMINGSTORE - Toko Gaming Terpercaya_files/hoodie gaming.png" alt="Kaos / Hoodie Gaming" onerror="this.src=&#39;https://via.placeholder.com/300x200/0f3460/ffffff?text=Gambar+Tidak+Tersedia&#39;">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Kaos / Hoodie Gaming</h3>
+                        <p class="product-description">Kaos dan hoodie dengan desain gaming yang keren.</p>
+                        <div class="product-price">Rp&nbsp;30.000</div>
+                        <div class="product-actions">
+                            <button class="add-to-cart" data-id="27">Tambah ke Keranjang</button>
+                        </div>
+                    </div>
+                </div><div class="product-card">
+                    <div class="product-image">
+                        <img src="./AVAGAMINGSTORE - Toko Gaming Terpercaya_files/bantal gaming.png" alt="Bantal / Cushion Gaming" onerror="this.src=&#39;https://via.placeholder.com/300x200/0f3460/ffffff?text=Gambar+Tidak+Tersedia&#39;">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Bantal / Cushion Gaming</h3>
+                        <p class="product-description">Bantal dan cushion dengan karakter game favorit.</p>
+                        <div class="product-price">Rp&nbsp;50.000</div>
+                        <div class="product-actions">
+                            <button class="add-to-cart" data-id="28">Tambah ke Keranjang</button>
+                        </div>
+                    </div>
+                </div><div class="product-card">
+                    <div class="product-image">
+                        <img src="./AVAGAMINGSTORE - Toko Gaming Terpercaya_files/tumblergaming.png" alt="Tumbler / Botol Gaming" onerror="this.src=&#39;https://via.placeholder.com/300x200/0f3460/ffffff?text=Gambar+Tidak+Tersedia&#39;">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Tumbler / Botol Gaming</h3>
+                        <p class="product-description">Tumbler dan botol minum dengan desain gaming yang unik.</p>
+                        <div class="product-price">Rp&nbsp;50.000</div>
+                        <div class="product-actions">
+                            <button class="add-to-cart" data-id="29">Tambah ke Keranjang</button>
+                        </div>
+                    </div>
+                </div><div class="product-card">
+                    <div class="product-image">
+                        <img src="./AVAGAMINGSTORE - Toko Gaming Terpercaya_files/retro mini konsol.png" alt="Konsol Mini Retro" onerror="this.src=&#39;https://via.placeholder.com/300x200/0f3460/ffffff?text=Gambar+Tidak+Tersedia&#39;">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">Konsol Mini Retro</h3>
+                        <p class="product-description">Konsol mini retro dengan koleksi game klasik.</p>
+                        <div class="product-price">Rp&nbsp;300.000</div>
+                        <div class="product-actions">
+                            <button class="add-to-cart" data-id="30">Tambah ke Keranjang</button>
+                        </div>
+                    </div>
+                </div></div>
+        </div>
+    </section>
+
+    <!-- Cart Modal -->
+    <div class="cart-modal" id="cartModal">
+        <div class="cart-header">
+            <h3>Keranjang Belanja</h3>
+            <button class="close-cart" id="closeCart">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="cart-items" id="cartItems">
+            <!-- Cart items will be added here -->
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cartTotal">Rp 0</span>
+            </div>
+            <button class="checkout-btn" id="checkoutBtn">Ordernya Disini</button>
+        </div>
+    </div>
+
+    <div class="overlay" id="overlay"></div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>AVAGAMINGSTORE</h3>
+                    <p>Toko gaming terpercaya dengan produk berkualitas dan pelayanan terbaik untuk memenuhi kebutuhan gaming Anda.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Kontak Kami</h3>
+                    <p><i class="fas fa-map-marker-alt"></i> Puri Bintaro Hijau, Jalan Nusa Indah XIII Blok D 14 No 20, Rt 10/Rw 12, Pondok Aren, Pondok Aren</p>
+                    <p><i class="fas fa-phone"></i> +62 812-8892-8043</p>
+                    <p><i class="fas fa-envelope"></i> info @kimatonemo2005@gmail.com</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Ikuti Kami</h3>
+                    <div class="social-icons">
+                        <a href="https://www.tiktok.com/@alfarizaas" target="_blank"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://www.instagram.com/alfarizaas" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.youtube.com/@alfarizaas" target="_blank"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>© 2023 AVAGAMINGSTORE. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Button -->
+    <a href="https://wa.me/6281288928043?text=Permisi%20Admin%20Avaress%20yang%20Terhormat..%20Mau%20Nanya-Nanya%20Tentang%20Barangnya%20dong." class="whatsapp-btn" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script>
+        // Sample product data dengan gambar
+        const products = [
+            { 
+                id: 1, 
+                name: "Gaming Mouse RGB", 
+                price: 150000, 
+                description: "Mouse gaming dengan sensor presisi tinggi dan RGB lighting.", 
+                image: "mouse gaming.png" 
+            },
+            { 
+                id: 2, 
+                name: "Mechanical Keyboard", 
+                price: 300000, 
+                description: "Keyboard mechanical dengan switch biru dan backlight RGB.", 
+                image: "keyboard gaming.png" 
+            },
+            { 
+                id: 3, 
+                name: "Gaming Headset 7.1", 
+                price: 250000, 
+                description: "Headset surround sound 7.1 dengan mikrofon noise-cancelling.", 
+                image: "headset gaming.png" 
+            },
+            { 
+                id: 4, 
+                name: "Mouse Pad XXL", 
+                price: 70000, 
+                description: "Mouse pad gaming ukuran besar dengan permukaan halus.", 
+                image: "mousepad.png" 
+            },
+            { 
+                id: 5, 
+                name: "Webcam 1080p", 
+                price: 200000, 
+                description: "Webcam HD 1080p untuk streaming dan conference.", 
+                image: "Webcam.png" 
+            },
+            { 
+                id: 6, 
+                name: "Gaming Chair", 
+                price: 1500000, 
+                description: "Kursi gaming ergonomis dengan desain esport.", 
+                image: "kursi gaming.png" 
+            },
+            { 
+                id: 7, 
+                name: "Controller Wireless", 
+                price: 150000, 
+                description: "Controller wireless untuk PC dan konsol gaming.", 
+                image: "joystick ps 4.png" 
+            },
+            { 
+                id: 8, 
+                name: "Monitor 144Hz", 
+                price: 2000000, 
+                description: "Monitor gaming 24 inci dengan refresh rate 144Hz.", 
+                image: "monitor gaming.png" 
+            },
+            { 
+                id: 9, 
+                name: "RGB Strip Light", 
+                price: 30000, 
+                description: "Strip LED RGB untuk setup gaming station.", 
+                image: "RGB Strip Light.png" 
+            },
+            { 
+                id: 10, 
+                name: "External SSD 1TB", 
+                price: 350000, 
+                description: "SSD external untuk penyimpanan game yang cepat.", 
+                image: "external ssd 1tb.png" 
+            },
+            { 
+                id: 11, 
+                name: "RAM Gaming", 
+                price: 400000, 
+                description: "RAM DDR4 16GB dengan heatsink RGB untuk performa gaming.", 
+                image: "ram gaming.png" 
+            },
+            { 
+                id: 12, 
+                name: "Cooling Pad Laptop", 
+                price: 200000, 
+                description: "Cooling pad dengan 4 kipas untuk laptop gaming.", 
+                image: "cooling pad gaming.png" 
+            },
+            { 
+                id: 13, 
+                name: "Microphone Condenser", 
+                price: 300000, 
+                description: "Microphone condenser untuk streaming dan recording.", 
+                image: "microphone condenser.png" 
+            },
+            { 
+                id: 14, 
+                name: "Gaming Desk", 
+                price: 1200000, 
+                description: "Meja gaming dengan cable management dan RGB lighting.", 
+                image: "meja gaming.png" 
+            },
+            { 
+                id: 15, 
+                name: "VR Headset", 
+                price: 300000, 
+                description: "Virtual reality headset dengan kontroler motion.", 
+                image: "vr gaming.png" 
+            },
+            { 
+                id: 16, 
+                name: "Stand Headset Gaming", 
+                price: 50000, 
+                description: "Stand headset dengan base yang kokoh dan desain elegan.", 
+                image: "stand headset.png" 
+            },
+            { 
+                id: 17, 
+                name: "Powerbank Gaming Fast Charge", 
+                price: 150000, 
+                description: "Powerbank 10000mAh dengan fast charging untuk perangkat gaming.", 
+                image: "powerbank gaming.png" 
+            },
+            { 
+                id: 18, 
+                name: "Holder HP Gaming", 
+                price: 50000, 
+                description: "Holder HP dengan sudut yang dapat disesuaikan untuk gaming mobile.", 
+                image: "holder hp.png" 
+            },
+            { 
+                id: 19, 
+                name: "Trigger Controller HP (PUBG/ML)", 
+                price: 50000, 
+                description: "Trigger controller untuk meningkatkan kontrol dalam game mobile.", 
+                image: "trigger controller.png" 
+            },
+            { 
+                id: 20, 
+                name: "Kabel Charger L-shape Gaming", 
+                price: 50000, 
+                description: "Kabel charger L-shape yang ergonomis untuk gaming sambil charge.", 
+                image: "charger l shape.png" 
+            },
+            { 
+                id: 21, 
+                name: "Docking Station Controller/Konsol", 
+                price: 150000, 
+                description: "Docking station untuk charge dan penyimpanan controller gaming.", 
+                image: "docking station.png" 
+            },
+            { 
+                id: 22, 
+                name: "GPU (VGA Card)", 
+                price: 2000000, 
+                description: "Graphics card high-end untuk gaming 4K dan VR.", 
+                image: "gpu cooler.png" 
+            },
+            { 
+                id: 23, 
+                name: "CPU Cooler RGB (Air/Water)", 
+                price: 250000, 
+                description: "CPU cooler dengan lighting RGB untuk PC gaming.", 
+                image: "cpu cooler.png" 
+            },
+            { 
+                id: 24, 
+                name: "PSU Gaming 550–850W", 
+                price: 700000, 
+                description: "Power supply unit untuk sistem gaming yang stabil.", 
+                image: "psu gaming.png" 
+            },
+            { 
+                id: 25, 
+                name: "Figurine Karakter Game", 
+                price: 100000, 
+                description: "Figurine karakter game favorit dengan detail yang menakjubkan.", 
+                image: "figure karakter.png" 
+            },
+            { 
+                id: 26, 
+                name: "Poster / Wall Art Gaming", 
+                price: 30000, 
+                description: "Poster dan wall art bertema gaming untuk dekorasi ruangan.", 
+                image: "wall art.png" 
+            },
+            { 
+                id: 27, 
+                name: "Kaos / Hoodie Gaming", 
+                price: 30000, 
+                description: "Kaos dan hoodie dengan desain gaming yang keren.", 
+                image: "hoodie gaming.png" 
+            },
+            { 
+                id: 28, 
+                name: "Bantal / Cushion Gaming", 
+                price: 50000, 
+                description: "Bantal dan cushion dengan karakter game favorit.", 
+                image: "bantal gaming.png" 
+            },
+            { 
+                id: 29, 
+                name: "Tumbler / Botol Gaming", 
+                price: 50000, 
+                description: "Tumbler dan botol minum dengan desain gaming yang unik.", 
+                image: "tumblergaming.png" 
+            },
+            { 
+                id: 30, 
+                name: "Konsol Mini Retro", 
+                price: 300000, 
+                description: "Konsol mini retro dengan koleksi game klasik.", 
+                image: "retro mini konsol.png" 
+            }
+        ];
+
+        // Cart functionality
+        let cart = [];
+        const cartIcon = document.getElementById('cartIcon');
+        const cartCount = document.getElementById('cartCount');
+        const cartModal = document.getElementById('cartModal');
+        const closeCart = document.getElementById('closeCart');
+        const overlay = document.getElementById('overlay');
+        const cartItems = document.getElementById('cartItems');
+        const cartTotal = document.getElementById('cartTotal');
+        const checkoutBtn = document.getElementById('checkoutBtn');
+        const productsGrid = document.getElementById('productsGrid');
+
+        // Format currency
+        function formatCurrency(amount) {
+            return new Intl.NumberFormat('id-ID', {
+                style: 'currency',
+                currency: 'IDR',
+                minimumFractionDigits: 0
+            }).format(amount);
+        }
+
+        // Render products
+        function renderProducts() {
+            productsGrid.innerHTML = '';
+            products.forEach(product => {
+                const productCard = document.createElement('div');
+                productCard.className = 'product-card';
+                productCard.innerHTML = `
+                    <div class="product-image">
+                        <img src="${product.image}" alt="${product.name}" onerror="this.src='https://via.placeholder.com/300x200/0f3460/ffffff?text=Gambar+Tidak+Tersedia'">
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-title">${product.name}</h3>
+                        <p class="product-description">${product.description}</p>
+                        <div class="product-price">${formatCurrency(product.price)}</div>
+                        <div class="product-actions">
+                            <button class="add-to-cart" data-id="${product.id}">Tambah ke Keranjang</button>
+                        </div>
+                    </div>
+                `;
+                productsGrid.appendChild(productCard);
+            });
+
+            // Add event listeners to add to cart buttons
+            document.querySelectorAll('.add-to-cart').forEach(button => {
+                button.addEventListener('click', function() {
+                    const productId = parseInt(this.getAttribute('data-id'));
+                    addToCart(productId);
+                });
+            });
+        }
+
+        // Add product to cart
+        function addToCart(productId) {
+            const product = products.find(p => p.id === productId);
+            const existingItem = cart.find(item => item.id === productId);
+            
+            if (existingItem) {
+                existingItem.quantity += 1;
+            } else {
+                cart.push({
+                    id: product.id,
+                    name: product.name,
+                    price: product.price,
+                    image: product.image,
+                    quantity: 1
+                });
+            }
+            
+            updateCart();
+            showNotification(`${product.name} ditambahkan ke keranjang`);
+        }
+
+        // Remove product from cart
+        function removeFromCart(productId) {
+            cart = cart.filter(item => item.id !== productId);
+            updateCart();
+        }
+
+        // Update quantity
+        function updateQuantity(productId, newQuantity) {
+            if (newQuantity < 1) {
+                removeFromCart(productId);
+                return;
+            }
+            
+            const item = cart.find(item => item.id === productId);
+            if (item) {
+                item.quantity = newQuantity;
+                updateCart();
+            }
+        }
+
+        // Update cart UI
+        function updateCart() {
+            // Update cart count
+            const totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+            cartCount.textContent = totalItems;
+            
+            // Update cart items
+            cartItems.innerHTML = '';
+            let totalPrice = 0;
+            
+            cart.forEach(item => {
+                const itemTotal = item.price * item.quantity;
+                totalPrice += itemTotal;
+                
+                const cartItem = document.createElement('div');
+                cartItem.className = 'cart-item';
+                cartItem.innerHTML = `
+                    <div class="cart-item-image">
+                        <img src="${item.image}" alt="${item.name}" onerror="this.src='https://via.placeholder.com/70x70/0f3460/ffffff?text=Img'">
+                    </div>
+                    <div class="cart-item-details">
+                        <div class="cart-item-title">${item.name}</div>
+                        <div class="cart-item-price">${formatCurrency(item.price)}</div>
+                        <div class="cart-item-quantity">
+                            <button class="quantity-btn minus" data-id="${item.id}">-</button>
+                            <input type="number" class="quantity-input" value="${item.quantity}" min="1" data-id="${item.id}">
+                            <button class="quantity-btn plus" data-id="${item.id}">+</button>
+                            <button class="remove-item" data-id="${item.id}">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </div>
+                    </div>
+                `;
+                cartItems.appendChild(cartItem);
+            });
+            
+            // Update total price
+            cartTotal.textContent = formatCurrency(totalPrice);
+            
+            // Add event listeners to quantity buttons
+            document.querySelectorAll('.quantity-btn.minus').forEach(button => {
+                button.addEventListener('click', function() {
+                    const productId = parseInt(this.getAttribute('data-id'));
+                    const item = cart.find(item => item.id === productId);
+                    if (item) {
+                        updateQuantity(productId, item.quantity - 1);
+                    }
+                });
+            });
+            
+            document.querySelectorAll('.quantity-btn.plus').forEach(button => {
+                button.addEventListener('click', function() {
+                    const productId = parseInt(this.getAttribute('data-id'));
+                    const item = cart.find(item => item.id === productId);
+                    if (item) {
+                        updateQuantity(productId, item.quantity + 1);
+                    }
+                });
+            });
+            
+            document.querySelectorAll('.quantity-input').forEach(input => {
+                input.addEventListener('change', function() {
+                    const productId = parseInt(this.getAttribute('data-id'));
+                    const newQuantity = parseInt(this.value) || 1;
+                    updateQuantity(productId, newQuantity);
+                });
+            });
+            
+            document.querySelectorAll('.remove-item').forEach(button => {
+                button.addEventListener('click', function() {
+                    const productId = parseInt(this.getAttribute('data-id'));
+                    removeFromCart(productId);
+                });
+            });
+        }
+
+        // Show notification
+        function showNotification(message) {
+            const notification = document.createElement('div');
+            notification.style.cssText = `
+                position: fixed;
+                top: 100px;
+                right: 20px;
+                background-color: var(--highlight);
+                color: white;
+                padding: 15px 20px;
+                border-radius: 5px;
+                z-index: 1001;
+                box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+                transition: all 0.3s ease;
+            `;
+            notification.textContent = message;
+            document.body.appendChild(notification);
+            
+            setTimeout(() => {
+                notification.style.opacity = '0';
+                setTimeout(() => {
+                    document.body.removeChild(notification);
+                }, 300);
+            }, 3000);
+        }
+
+        // Generate WhatsApp message
+        function generateWhatsAppMessage() {
+            let message = "Permisi Admin Avaress yang Terhormat.. Apakah Barang Tersebut Masih Tersedia?\n\n";
+            
+            cart.forEach(item => {
+                message += `- ${item.name} (${item.quantity}x) - ${formatCurrency(item.price * item.quantity)}\n`;
+            });
+            
+            const total = cart.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+            message += `\nTotal: ${formatCurrency(total)}\n\n`;
+            message += "Alamat: [Silakan isi alamat lengkap Anda]";
+            
+            return encodeURIComponent(message);
+        }
+
+        // Initialize
+        function init() {
+            renderProducts();
+            
+            // Cart toggle
+            cartIcon.addEventListener('click', () => {
+                cartModal.classList.add('open');
+                overlay.classList.add('active');
+            });
+            
+            closeCart.addEventListener('click', () => {
+                cartModal.classList.remove('open');
+                overlay.classList.remove('active');
+            });
+            
+            overlay.addEventListener('click', () => {
+                cartModal.classList.remove('open');
+                overlay.classList.remove('active');
+            });
+            
+            // Checkout button
+            checkoutBtn.addEventListener('click', () => {
+                if (cart.length === 0) {
+                    showNotification('Keranjang belanja kosong!');
+                    return;
+                }
+                
+                const phoneNumber = "6281288928043"; // Nomor WhatsApp Anda
+                const message = generateWhatsAppMessage();
+                const url = `https://wa.me/${phoneNumber}?text=${message}`;
+                
+                window.open(url, '_blank');
+            });
+        }
+
+        // Run initialization when DOM is loaded
+        document.addEventListener('DOMContentLoaded', init);
+    </script>
+
+</body></html>
